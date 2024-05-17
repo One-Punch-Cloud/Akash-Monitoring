@@ -13,7 +13,7 @@ func TestLoadConfig(t *testing.T) {
 
 	config, err := LoadConfig(".")
 	if err != nil {
-		t.Fatalf("Failed to load config: %s", err)
+		t.Fatalf("Failed to load configs: %s", err)
 	}
 
 	if config.PingIntervalInternal != 15 {

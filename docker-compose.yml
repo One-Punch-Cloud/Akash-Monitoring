@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  onePunchAkashMonitoring:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_IP=192.168.1.100
+      - NODE_EMAIL=node100@example.com
+      - SERVER_PORT=8080
+      - INTERNAL_PING_INTERVAL=10s
+      - EXTERNAL_PING_INTERVAL=1m
+      - UNHEALTHY_THRESHOLD=3
+    restart: unless-stopped
